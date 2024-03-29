@@ -1,0 +1,128 @@
+.text-field {
+    -fx-background-color:  #d09d3c,  #F0F8FF ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+}
+.text-field:focused {
+    -fx-background-color: #d09d3c,  #F0F8FF;
+    -fx-text-fill: black;
+}
+.table-button {
+	-fx-background-color: #d09d3c;
+	-fx-cursor: hand;
+}
+.table-button:hover{
+	-fx-background-color: transparent;
+}
+
+.button {
+    -fx-padding: 7px;
+}
+
+/** TabPane **/
+
+.tab-header-area .tab-header-background {
+ 	-fx-background-color: "#78c2f0";
+        -fx-background-position: center center;
+}
+
+.tab-pane .tab:selected {
+	-fx-background-color:  "#66b3e2";
+	-fx-background-insets: 0 ;
+	-fx-background-radius: 0 ;
+}
+.tab .tab-label {
+ 	-fx-alignment: CENTER;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-padding: 0 5 0 5;
+}
+.tab-pane:top *.tab-header-area {
+	-fx-padding: 0 0 0 20;
+
+	/* NO SPACE LEFT OF FIRST TAB */
+	/* -fx-padding: 0 0 0 30; */
+}
+.tab-pane {
+	-fx-background-color: transparent;
+	-fx-tab-min-width: 70px;
+	-fx-tab-min-height: 50px;
+	-fx-tab-max-height: 66px;
+}
+.tab-pane .tab {
+	-fx-background-color: transparent;
+}
+.tab-pane:focused .tab-header-area .headers-region .tab:selected .focus-indicator {
+ 	-fx-border-color: transparent;
+}
+
+/** tables **/
+
+.table-view {
+	-fx-border-color: transparent;
+	-fx-background-color: #ffffff2e; /* OR  -fx-background-insets: 0.0; */
+}
+.table-view .column-header-background,
+.table-view .column-header-background .filler,
+.table-view .corner {
+	-fx-background-color: transparent;
+}
+.table-view .column-header {
+	-fx-background-color:  #F0F8FF;
+}
+.table-view .column-header .label{
+	-fx-font-weight: bold;
+	-fx-alignment: center-left;
+	-fx-padding: 10px;
+	-fx-text-fill: #d09d3c;
+}
+/* This is just magic */
+.table-row-cell:filled {
+	-fx-background-color: transparent;
+	-fx-border-color: transparent #d09d3c #d09d3c #d09d3c, transparent;
+	-fx-border-insets: 0, 1;
+}
+.table-row-cell:empty {
+	-fx-background-color: transparent;
+}
+.table-row-cell:filled:hover {
+	-fx-background-color: #d09d3c;
+}
+.table-row-cell:filled:selected:hover {
+	-fx-background-color: #d09d3c;
+}
+.table-row-cell:filled:selected {
+  	-fx-background-color: #d09d3c;
+ 	-fx-background-insets: 0.0;
+	-fx-background-radius: 0.0;
+}
+.table-row-cell:filled:selected .table-cell {
+	-fx-text-fill: white;
+}
+.table-view .cell:filled{
+	-fx-cell-size: 30;
+	-fx-alignment: center-left;
+}
+.check-box-table-cell > .check-box:selected .box .mark {
+	-fx-background-color:  #F0F8FF;
+}
+.check-box-table-cell > .check-box:selected .box{
+	-fx-background-color: #d09d3c;
+}
+.table-view .placeholder .label {
+	-fx-text-fill:  #F0F8FF;
+	-fx-padding:20px;
+}
+/* toolbar */
+
+.tool-bar {
+    -fx-background-color: #ffffff2e;
+    -fx-padding: 10px;
+}
+
+.tool-bar .button {
+    -fx-padding: 5px 20px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
