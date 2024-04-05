@@ -174,7 +174,7 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="65.0" prefWidth="860.0">
+                        <TableView prefHeight="213.0" prefWidth="860.0">
                           <columns>
                               <TableColumn prefWidth="51.0" text="Identificacion" />
                               <TableColumn prefWidth="140.0" text="Cedula" />
@@ -189,17 +189,8 @@
                         <TableView layoutX="30.0" layoutY="95.0" prefHeight="153.0" prefWidth="860.0">
                            <columns>
                               <TableColumn prefWidth="51.0" text="Identificacion" />
-                              <TableColumn prefWidth="421.0" text="Cursos" />
-                              <TableColumn prefWidth="269.0" text="Profesor" />
-                              <TableColumn prefWidth="117.0" text="Aula" />
-                           </columns>
-                        </TableView>
-                        <TableView layoutX="30.0" layoutY="263.0" prefHeight="153.0" prefWidth="860.0">
-                           <columns>
-                              <TableColumn prefWidth="145.66668701171875" text="Referencia" />
-                              <TableColumn prefWidth="456.0" text="Descripcion de pago" />
-                              <TableColumn prefWidth="119.0" text="Monto" />
-                              <TableColumn prefWidth="149.33331298828125" text="Fecha" />
+                              <TableColumn prefWidth="637.0" text="Cursos" />
+                              <TableColumn prefWidth="170.0" text="Profesor" />
                            </columns>
                         </TableView>
                      </children>
@@ -258,19 +249,12 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="143.0" prefWidth="860.0">
+                        <TableView prefHeight="422.0" prefWidth="860.0">
                            <columns>
                               <TableColumn prefWidth="50.0" text="Identificacion" />
                               <TableColumn prefWidth="351.0" text="Nombre" />
                               <TableColumn minWidth="0.0" prefWidth="329.0" text="Instructor" />
-                              <TableColumn minWidth="0.0" prefWidth="128.0" text="Cupos disponibles" />
-                           </columns>
-                        </TableView>
-                        <TableView layoutX="30.0" layoutY="95.0" prefHeight="245.0" prefWidth="860.0">
-                           <columns>
-                              <TableColumn prefWidth="49.0" text="Identificacion" />
-                              <TableColumn prefWidth="710.0" text="Estudiante" />
-                              <TableColumn prefWidth="99.0" text="Edad" />
+                              <TableColumn minWidth="0.0" prefWidth="128.0" text="Costo" />
                            </columns>
                         </TableView>
                      </children>
@@ -396,7 +380,7 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="143.0" prefWidth="860.0">
+                        <TableView prefHeight="417.0" prefWidth="860.0">
                            <columns>
                               <TableColumn minWidth="0.0" prefWidth="50.0" text="Identificacion" />
                               <TableColumn prefWidth="157.0" text="Nombre" />
@@ -404,15 +388,6 @@
                               <TableColumn minWidth="0.0" prefWidth="168.0" text="Teléfono" />
                               <TableColumn minWidth="0.0" prefWidth="114.0" text="Genero" />
                               <TableColumn minWidth="0.0" prefWidth="213.0" text="Especializacion" />
-                           </columns>
-                        </TableView>
-                        <TableView layoutX="30.0" layoutY="95.0" prefHeight="245.0" prefWidth="860.0">
-                           <columns>
-                              <TableColumn prefWidth="52.0" text="Identificacion" />
-                              <TableColumn prefWidth="392.0" text="Curso" />
-                              <TableColumn prefWidth="178.0" text="Area" />
-                              <TableColumn prefWidth="159.0" text="Cupos disponibles" />
-                              <TableColumn prefWidth="78.0" text="Aula" />
                            </columns>
                         </TableView>
                      </children>

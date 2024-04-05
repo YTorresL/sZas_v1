@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768084fc-9a46-450c-9c8e-de7eaad876f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addStudent.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/hello-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourses.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/images/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/images/debug.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +42,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/sZas_v1/src/main/resources/com/init/szas_v1"
+    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/sZas_v1"
   }
 }]]></component>
   <component name="RecentsManager">
