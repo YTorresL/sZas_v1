@@ -5,15 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768084fc-9a46-450c-9c8e-de7eaad876f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Administracion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/DBconn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourses.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/images/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/images/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,10 +51,12 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/sZas_v1"
+    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/CineVe"
   }
 }]]></component>
   <component name="RecentsManager">
