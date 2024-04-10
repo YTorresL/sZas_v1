@@ -90,7 +90,7 @@
                         <Font name="Arial" size="12.0" />
                      </font>
                   </Label>
-                  <Label fx:id="welcomeText1" layoutX="260.0" layoutY="428.0" textFill="#eb0909">
+                  <Label fx:id="welcomeText" layoutX="260.0" layoutY="428.0" textFill="#eb0909">
                      <font>
                         <Font name="Arial" size="12.0" />
                      </font>
