@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.StackedAreaChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
@@ -14,10 +15,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -36,37 +34,47 @@
                            <children>
                               <ToolBar orientation="VERTICAL" prefHeight="509.0" prefWidth="223.0">
                                  <items>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo estudiante" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#agrEstudiantesClick" style="-fx-background-color: #2bc600;" text="Nuevo estudiante" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar estudiante" textFill="WHITE">
+                                    <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editEstudiantesClick" style="-fx-background-color: #2c97d9;" text="Modificar estudiante" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar estudiante" textFill="WHITE">
+                                    <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#desMatriculasClick" style="-fx-background-color: #d92c2c;" text="Desactivar estudiante" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo curso" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#agrCursosClick" style="-fx-background-color: #2bc600;" text="Nuevo curso" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar curso" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#editCursosClick" style="-fx-background-color: #2c97d9;" text="Modificar curso" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar curso" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#desCursosClick" style="-fx-background-color: #d92c2c;" text="Desactivar curso" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo pago" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#agrPagosClick" style="-fx-background-color: #2bc600;" text="Nuevo pago" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" onAction="#canPagosClick" style="-fx-background-color: #d92c2c;" text="Cancelar pago" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Generar reporte de pago" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -76,46 +84,41 @@
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo Instructor" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#agrInstructoresClick" style="-fx-background-color: #2bc600;" text="Nuevo Instructor" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar Instructor" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#editInstructoresClick" style="-fx-background-color: #2c97d9;" text="Modificar Instructor" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar Instructor" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#desInstructoresClick" style="-fx-background-color: #d92c2c;" text="Desactivar Instructor" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nueva Matricula" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#agrMatriculasClick" style="-fx-background-color: #2bc600;" text="Nueva Matricula" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar Matricula" textFill="WHITE">
-                                       <font>
-                                          <Font name="Arial" size="12.0" />
-                                       </font>
-                                    </Button>
-                                    <Button mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar Matricula" textFill="WHITE">
+                                    <Button mnemonicParsing="false" onAction="#desMatriculasClick" style="-fx-background-color: #d92c2c;" text="Desactivar Matricula" textFill="WHITE">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
                                     </Button>
                                  </items>
                               </ToolBar>
-                              <StackedAreaChart prefHeight="509.0" prefWidth="644.0">
+                              <BarChart fx:id="barChartPagos" prefHeight="509.0" prefWidth="640.0" title="Estadisticas de pagos">
                                 <xAxis>
-                                  <NumberAxis side="BOTTOM" />
+                                  <CategoryAxis label="Mes" prefHeight="39.0" prefWidth="561.0" side="BOTTOM" fx:id="xAxisPagos" />
                                 </xAxis>
                                 <yAxis>
-                                  <NumberAxis side="LEFT" />
+                                  <NumberAxis fx:id="yAxisPagos" label="Total Pagado" side="LEFT" />
                                 </yAxis>
-                              </StackedAreaChart>
+                              </BarChart>
                            </children>
                         </HBox>
                      </children>
@@ -135,17 +138,17 @@
                      <children>
                         <ToolBar prefHeight="26.0" prefWidth="860.0">
                           <items>
-                            <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo estudiante" textFill="WHITE">
+                            <Button mnemonicParsing="false" onAction="#agrEstudiantesClick" style="-fx-background-color: #2bc600;" text="Nuevo estudiante" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar estudiante" textFill="WHITE">
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editEstudiantesClick" style="-fx-background-color: #2c97d9;" text="Modificar estudiante" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar estudiante" textFill="WHITE">
+                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#desEstudianteClick" style="-fx-background-color: #d92c2c;" text="Desactivar estudiante" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -154,18 +157,31 @@
                         </ToolBar>
                         <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="860.0">
                            <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="102.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#actEstudiantesClick" style="-fx-background-color: #d92c2c;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 10px;">
                                  <children>
-                                    <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0" style="-fx-padding: 5px;">
+                                    <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0">
                                        <children>
-                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@images/64673.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Button mnemonicParsing="false" onAction="#buscarEstudiante" style="-fx-background-color: transparent;">
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@images/64673.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
                                        </children>
                                     </VBox>
-                                    <TextField prefHeight="7.0" prefWidth="174.0" promptText="Estudiante" style="-fx-padding: 10px; -fx-background-radius: 0px 10px 10px 0px;">
+                                    <TextField fx:id="textoBusqueda" prefHeight="7.0" prefWidth="174.0" promptText="Estudiante" style="-fx-padding: 10px; -fx-background-radius: 0px 10px 10px 0px;">
                                        <font>
                                           <Font name="Arial" size="12.0" />
                                        </font>
@@ -174,24 +190,19 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="213.0" prefWidth="860.0">
+                        <TableView fx:id="tableEstudiantes" prefHeight="402.0" prefWidth="860.0">
                           <columns>
-                              <TableColumn prefWidth="51.0" text="Identificacion" />
-                              <TableColumn prefWidth="140.0" text="Cedula" />
-                            <TableColumn prefWidth="134.0" text="Nombre" />
-                              <TableColumn prefWidth="126.0" text="Apellido" />
-                            <TableColumn prefWidth="87.0" text="Edad" />
-                              <TableColumn prefWidth="85.0" text="Genero" />
-                              <TableColumn prefWidth="123.0" text="Telefono" />
-                              <TableColumn prefWidth="112.0" text="Dirección" />
+                              <TableColumn fx:id="estIdentificacion" prefWidth="51.0" text="Identificacion" />
+                              <TableColumn fx:id="estCedula" prefWidth="140.0" text="Cedula" />
+                            <TableColumn fx:id="estNombre" prefWidth="134.0" text="Nombre" />
+                              <TableColumn fx:id="estApellido" prefWidth="126.0" text="Apellido" />
+                            <TableColumn fx:id="estEdad" prefWidth="87.0" text="Edad" />
+                              <TableColumn fx:id="estGenero" prefWidth="85.0" text="Genero" />
+                              <TableColumn fx:id="estTelefono" prefWidth="123.0" text="Telefono" />
+                              <TableColumn fx:id="estDireccion" prefWidth="112.0" text="Dirección" />
+                              <TableColumn fx:id="estCorreo" prefWidth="112.0" text="Correo" />
+                              <TableColumn fx:id="estNacimiento" prefWidth="112.0" text="Lugar de nacimiento" />
                           </columns>
-                        </TableView>
-                        <TableView layoutX="30.0" layoutY="95.0" prefHeight="153.0" prefWidth="860.0">
-                           <columns>
-                              <TableColumn prefWidth="51.0" text="Identificacion" />
-                              <TableColumn prefWidth="637.0" text="Cursos" />
-                              <TableColumn prefWidth="170.0" text="Profesor" />
-                           </columns>
                         </TableView>
                      </children>
                   </VBox>
@@ -210,17 +221,17 @@
                      <children>
                         <ToolBar prefHeight="26.0" prefWidth="860.0">
                            <items>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo curso" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#agrCursosClick" style="-fx-background-color: #2bc600;" text="Nuevo curso" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar curso" textFill="WHITE">
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editCursosClick" style="-fx-background-color: #2c97d9;" text="Modificar curso" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar curso" textFill="WHITE">
+                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#desCursosClick" style="-fx-background-color: #d92c2c;" text="Desactivar curso" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -229,6 +240,15 @@
                         </ToolBar>
                         <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="860.0">
                            <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="102.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#actCursosClick" style="-fx-background-color: #d92c2c;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 10px;">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0" style="-fx-padding: 5px;">
@@ -249,12 +269,12 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="422.0" prefWidth="860.0">
+                        <TableView fx:id="tableCursos" prefHeight="422.0" prefWidth="860.0">
                            <columns>
-                              <TableColumn prefWidth="50.0" text="Identificacion" />
-                              <TableColumn prefWidth="351.0" text="Nombre" />
-                              <TableColumn minWidth="0.0" prefWidth="329.0" text="Instructor" />
-                              <TableColumn minWidth="0.0" prefWidth="128.0" text="Costo" />
+                              <TableColumn fx:id="curIdentificacion" prefWidth="50.0" text="Identificacion" />
+                              <TableColumn fx:id="curNombre" prefWidth="351.0" text="Nombre" />
+                              <TableColumn fx:id="curInstructor" minWidth="0.0" prefWidth="329.0" text="Instructor" />
+                              <TableColumn fx:id="curCosto" minWidth="0.0" prefWidth="128.0" text="Costo" />
                            </columns>
                         </TableView>
                      </children>
@@ -274,7 +294,12 @@
                      <children>
                         <ToolBar prefHeight="26.0" prefWidth="860.0">
                            <items>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo pago" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#agrPagosClick" style="-fx-background-color: #2bc600;" text="Nuevo pago" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#canPagosClick" style="-fx-background-color: #d92c2c;" text="Cancelar pago" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -293,6 +318,15 @@
                         </ToolBar>
                         <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="860.0">
                            <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="102.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#actPagosClick" style="-fx-background-color: #d92c2c;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 10px;">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0" style="-fx-padding: 5px;">
@@ -313,15 +347,15 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="474.0" prefWidth="860.0">
+                        <TableView fx:id="tablePagos" prefHeight="474.0" prefWidth="860.0">
                            <columns>
-                              <TableColumn minWidth="0.0" prefWidth="50.0" text="Identificacion" />
-                              <TableColumn prefWidth="99.0" text="Referencia" />
-                              <TableColumn prefWidth="162.0" text="Estudiante" />
-                              <TableColumn minWidth="0.0" prefWidth="193.0" text="Descripción" />
-                              <TableColumn minWidth="0.0" prefWidth="116.0" text="Monto" />
-                              <TableColumn minWidth="0.0" prefWidth="100.0" text="Fecha" />
-                              <TableColumn minWidth="0.0" prefWidth="138.0" text="Metodo de pago" />
+                              <TableColumn fx:id="pagIdentificacion" minWidth="0.0" prefWidth="50.0" text="Identificacion" />
+                              <TableColumn fx:id="pagReferencia" prefWidth="99.0" text="Referencia" />
+                              <TableColumn fx:id="pagEstudiante" prefWidth="162.0" text="Estudiante" />
+                              <TableColumn fx:id="pagDescripcion" minWidth="0.0" prefWidth="193.0" text="Descripción" />
+                              <TableColumn fx:id="pagMonto" minWidth="0.0" prefWidth="116.0" text="Monto" />
+                              <TableColumn fx:id="pagFecha" minWidth="0.0" prefWidth="100.0" text="Fecha" />
+                              <TableColumn fx:id="pagMetodo" minWidth="0.0" prefWidth="138.0" text="Metodo de pago" />
                            </columns>
                         </TableView>
                      </children>
@@ -341,17 +375,17 @@
                      <children>
                         <ToolBar prefHeight="26.0" prefWidth="860.0">
                            <items>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nuevo Instructor" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#agrInstructoresClick" style="-fx-background-color: #2bc600;" text="Nuevo Instructor" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Modificar Instructor" textFill="WHITE">
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editInstructoresClick" style="-fx-background-color: #2c97d9;" text="Modificar Instructor" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar Instructor" textFill="WHITE">
+                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#desInstructoresClick" style="-fx-background-color: #d92c2c;" text="Desactivar Instructor" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -360,6 +394,15 @@
                         </ToolBar>
                         <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="860.0">
                            <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="102.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#actInstructoresClick" style="-fx-background-color: #d92c2c;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 10px;">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0" style="-fx-padding: 5px;">
@@ -380,14 +423,17 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="417.0" prefWidth="860.0">
+                        <TableView fx:id="tableInstructores" prefHeight="417.0" prefWidth="860.0">
                            <columns>
-                              <TableColumn minWidth="0.0" prefWidth="50.0" text="Identificacion" />
-                              <TableColumn prefWidth="157.0" text="Nombre" />
-                              <TableColumn prefWidth="156.0" text="Apellido" />
-                              <TableColumn minWidth="0.0" prefWidth="168.0" text="Teléfono" />
-                              <TableColumn minWidth="0.0" prefWidth="114.0" text="Genero" />
-                              <TableColumn minWidth="0.0" prefWidth="213.0" text="Especializacion" />
+                              <TableColumn fx:id="insIdentificacion" minWidth="0.0" prefWidth="50.0" text="Identificacion" />
+                              <TableColumn fx:id="insNombre" prefWidth="157.0" text="Nombre" />
+                              <TableColumn fx:id="insApellido" prefWidth="156.0" text="Apellido" />
+                              <TableColumn fx:id="insCedula" prefWidth="156.0" text="Cedula" />
+                              <TableColumn fx:id="insTelefono" minWidth="0.0" prefWidth="168.0" text="Teléfono" />
+                              <TableColumn fx:id="insGenero" minWidth="0.0" prefWidth="114.0" text="Genero" />
+                              <TableColumn fx:id="insEspecialidad" minWidth="0.0" prefWidth="213.0" text="Especializacion" />
+                              <TableColumn fx:id="insDireccion" minWidth="0.0" prefWidth="213.0" text="Direccion" />
+                              <TableColumn fx:id="insCorreo" minWidth="0.0" prefWidth="213.0" text="Correo" />
                            </columns>
                         </TableView>
                      </children>
@@ -407,12 +453,12 @@
                      <children>
                         <ToolBar prefHeight="26.0" prefWidth="860.0">
                            <items>
-                              <Button mnemonicParsing="false" style="-fx-background-color: #2bc600;" text="Nueva Matricula" textFill="WHITE">
+                              <Button mnemonicParsing="false" onAction="#agrMatriculasClick" style="-fx-background-color: #2bc600;" text="Nueva Matricula" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
                               </Button>
-                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Desactivar Matricula" textFill="WHITE">
+                              <Button layoutX="155.0" layoutY="10.0" mnemonicParsing="false" onAction="#desMatriculasClick" style="-fx-background-color: #d92c2c;" text="Desactivar Matricula" textFill="WHITE">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -421,6 +467,15 @@
                         </ToolBar>
                         <HBox alignment="TOP_RIGHT" prefHeight="18.0" prefWidth="860.0">
                            <children>
+                              <HBox alignment="CENTER" prefHeight="35.0" prefWidth="102.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#actMatriculasClick" style="-fx-background-color: #d92c2c;" text="Actualizar" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F0F8FF; -fx-background-radius: 10px;">
                                  <children>
                                     <VBox alignment="CENTER" prefHeight="41.0" prefWidth="45.0" style="-fx-padding: 5px;">
@@ -441,12 +496,13 @@
                               </HBox>
                            </children>
                         </HBox>
-                        <TableView prefHeight="443.0" prefWidth="860.0">
+                        <TableView fx:id="tableMatriculas" prefHeight="443.0" prefWidth="860.0">
                            <columns>
-                              <TableColumn prefWidth="51.0" text="Identificacion" />
-                              <TableColumn prefWidth="373.0" text="Estudiante" />
-                              <TableColumn minWidth="0.0" prefWidth="295.0" text="Curso" />
-                              <TableColumn minWidth="0.0" prefWidth="140.0" text="Fecha" />
+                              <TableColumn fx:id="matIdentificacion" prefWidth="51.0" text="Identificacion" />
+                              <TableColumn fx:id="matEstudiante" prefWidth="373.0" text="Estudiante" />
+                              <TableColumn fx:id="matCurso" minWidth="0.0" prefWidth="295.0" text="Curso" />
+                              <TableColumn fx:id="matFecha" minWidth="0.0" prefWidth="140.0" text="Fecha" />
+                              <TableColumn fx:id="matEstado" minWidth="0.0" prefWidth="140.0" text="Estado" />
                            </columns>
                         </TableView>
                      </children>
@@ -466,82 +522,18 @@
                      <children>
                         <HBox prefHeight="499.0" prefWidth="860.0">
                            <children>
-                              <VBox prefHeight="499.0" prefWidth="595.0">
+                              <VBox alignment="CENTER" prefHeight="499.0" prefWidth="595.0">
                                  <children>
-                                    <GridPane prefHeight="272.0" prefWidth="426.0" style="-fx-background-color: #ffffff2e;">
-                                      <columnConstraints>
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                      </columnConstraints>
-                                      <rowConstraints>
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                      </rowConstraints>
-                                       <children>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 20px;">
-                                             <children>
-                                                <Label text="Nombre" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial Bold" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label text="Label" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 20px;" GridPane.columnIndex="1">
-                                             <children>
-                                                <Label text="Apellido" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial Bold" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label text="Label" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 20px;" GridPane.rowIndex="1">
-                                             <children>
-                                                <Label text="Correo" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial Bold" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label text="Label" textFill="WHITE">
-                                                   <font>
-                                                      <Font name="Arial" size="12.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </GridPane>
+                                    <Label text="Muy Pronto" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="61.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </VBox>
                               <VBox alignment="TOP_RIGHT" prefHeight="499.0" prefWidth="523.0">
                                  <children>
-                                    <ToolBar nodeOrientation="RIGHT_TO_LEFT" orientation="VERTICAL" prefHeight="509.0" prefWidth="223.0">
-                                       <items>
-                                          <Button mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Cambiar contraseña" textFill="WHITE">
-                                             <font>
-                                                <Font name="Arial" size="12.0" />
-                                             </font>
-                                          </Button>
-                                          <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #2c97d9;" text="Cambiar correo" textFill="WHITE">
-                                             <font>
-                                                <Font name="Arial" size="12.0" />
-                                             </font>
-                                          </Button>
-                                       </items>
-                                    </ToolBar>
-                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                    <HBox alignment="BOTTOM_RIGHT" prefHeight="529.0" prefWidth="394.0">
                                        <children>
                                           <Button mnemonicParsing="false" style="-fx-background-color: #d92c2c;" text="Finalizar sección" textFill="WHITE">
                                              <font>

@@ -2,7 +2,6 @@ package com.init.szas_v1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLData;
 
 public class DBconn {
     Connection conn = null;

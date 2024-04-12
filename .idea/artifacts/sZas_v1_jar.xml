@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="sZas_v1:jar">
+  <artifact type="jar" build-on-make="true" name="sZas_v1:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/sZas_v1_jar</output-path>
-    <root id="archive" name="sZas_v1.jar">
+    <root id="root">
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/21/javafx-graphics-21.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/21/javafx-controls-21.jar" path-in-jar="/" />

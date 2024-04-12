@@ -6,32 +6,32 @@ import java.sql.Statement;
 
 public class Administracion {
 
-    private String User;
-    private String Password;
-    private Statement stmt;
+    private String usuario;
+    private String contrasena;
+    private Statement declaracion;
 
-    public DBconn conn;
+    public DBconn conexion;
 
-    public Administracion(DBconn conn) {
-        this.conn = conn;
+    public Administracion(DBconn conexion) {
+        this.conexion = conexion;
     }
 
-    public boolean Login(String user, String password) throws SQLException {
-        this.User = user;
-        this.Password = password;
+    public boolean iniciarSesion(String usuario, String contrasena) throws SQLException {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
 
         try {
-            stmt = conn.conn.createStatement();
-            String query = "SELECT * FROM administracion WHERE usuario = '" + User + "' AND contrasena = '" + Password + "'";
-            System.out.println(query);
-            ResultSet rs = stmt.executeQuery(query);
-            return rs.next(); // Retorna true si hay al menos un resultado en la consulta, de lo contrario retorna false.
+            declaracion = conexion.conn.createStatement();
+            String consulta = "SELECT * FROM administracion WHERE usuario = '" + this.usuario + "' AND contrasena = '" + this.contrasena + "'";
+            System.out.println(consulta);
+            ResultSet resultado = declaracion.executeQuery(consulta);
+            return resultado.next(); // Retorna true si hay al menos un resultado en la consulta, de lo contrario retorna false.
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         } finally {
-            if (stmt != null) {
-                stmt.close(); // Cierra el statement cuando haya terminado de usarlo
+            if (declaracion != null) {
+                declaracion.close(); // Cierra el statement cuando haya terminado de usarlo
             }
         }
     }

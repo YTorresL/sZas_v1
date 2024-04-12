@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: #87CEFA;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.init.szas_v1.HelloController">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="20.0" style="-fx-background-color: #87CEFA;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.init.szas_v1.EstudianteController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -44,7 +44,7 @@
                                     </ImageView>
                                  </children>
                               </VBox>
-                              <TextField prefHeight="35.0" prefWidth="241.0" promptText="3020.." style="-fx-padding: 10px;">
+                              <TextField fx:id="id_estudiante" prefHeight="35.0" prefWidth="241.0" promptText="3020.." style="-fx-padding: 10px;">
                                  <font>
                                     <Font name="Arial" size="12.0" />
                                  </font>
@@ -79,7 +79,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="Maria" style="-fx-padding: 10px;">
+                                          <TextField fx:id="nombre" prefHeight="35.0" prefWidth="241.0" promptText="Maria" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -97,7 +97,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="3020039" style="-fx-padding: 10px;">
+                                          <TextField fx:id="cedula" prefHeight="35.0" prefWidth="241.0" promptText="3020039" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -113,7 +113,7 @@
                                           <Font name="Arial Bold" size="12.0" />
                                        </font>
                                     </Label>
-                                    <DatePicker prefHeight="33.0" prefWidth="209.0" promptText="20/20/20" />
+                                    <DatePicker fx:id="fecha_nacimiento" prefHeight="33.0" prefWidth="209.0" promptText="20/20/20" />
                                  </children>
                               </VBox>
                               <VBox layoutX="10.0" layoutY="128.0" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
@@ -123,7 +123,7 @@
                                           <Font name="Arial Bold" size="12.0" />
                                        </font>
                                     </Label>
-                                    <ComboBox prefHeight="31.0" prefWidth="204.0" promptText="Femenino" />
+                                    <ComboBox fx:id="genero" prefHeight="31.0" prefWidth="204.0" promptText="Femenino" />
                                  </children>
                               </VBox>
                               <VBox layoutX="245.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -135,7 +135,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
+                                          <TextField fx:id="telefono" prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -159,7 +159,7 @@
                                           </HBox>
                                           <HBox alignment="TOP_RIGHT" prefHeight="22.0" prefWidth="106.0">
                                              <children>
-                                                <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #2bc600;" text="Aceptar" textFill="WHITE">
+                                                <Button fx:id="agregar" mnemonicParsing="false" onAction="#editEstudiante" prefHeight="29.0" prefWidth="86.0" style="-fx-background-color: #2bc600;" text="Aceptar" textFill="WHITE">
                                                    <font>
                                                       <Font name="Arial" size="12.0" />
                                                    </font>
@@ -168,6 +168,11 @@
                                           </HBox>
                                        </children>
                                     </HBox>
+                                    <Label fx:id="mensaje" textFill="RED">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
@@ -179,7 +184,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="Rojas" style="-fx-padding: 10px;">
+                                          <TextField fx:id="apellido" prefHeight="35.0" prefWidth="241.0" promptText="Rojas" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -197,7 +202,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
+                                          <TextField fx:id="correo" prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -215,7 +220,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
+                                          <TextField fx:id="direccion" prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>
@@ -233,7 +238,7 @@
                                     </Label>
                                     <HBox prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: #87CEFA; -fx-background-radius: 10px;">
                                        <children>
-                                          <TextField prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
+                                          <TextField fx:id="lugar_nacimiento" prefHeight="35.0" prefWidth="241.0" promptText="0412484955" style="-fx-padding: 10px;">
                                              <font>
                                                 <Font name="Arial" size="12.0" />
                                              </font>

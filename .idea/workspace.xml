@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="sZas_v1:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="768084fc-9a46-450c-9c8e-de7eaad876f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/sZas_v1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Curso.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/CursoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Estudiante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/EstudianteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Instructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/InstructorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Matricula.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/MatriculaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Pago.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Administracion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/Administracion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/DBconn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/DBconn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/init/szas_v1/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addCourse.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addEnrollment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addEnrollment.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addInstructor.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addInstructor.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addPay.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addPay.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addStudent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/addStudent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/editCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/editCourse.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/editStudent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/editStudent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/offCourses.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/offCourse.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/init/szas_v1/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +53,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;YTorresL&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="95bad7c3-c61e-489a-a964-38ffa375faac" />
+        <option name="url" value="https://github.com/YTorresL/sZas_v1.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -48,10 +94,17 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/sZas_v1"
+    "last_opened_file_path": "C:/Users/yalit/OneDrive/Desktop/YTorres/Dev/JavaFX/sZas_v1/src",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.init.szas_v1" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\yalit\OneDrive\Desktop\YTorres\Dev\JavaFX\sZas_v1\src\main\resources\com\init\szas_v1" />
     </key>
